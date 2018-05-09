@@ -260,9 +260,9 @@ module DB = struct
     stub_open_db_for_readonly (options ||| Options.default)
       name error_if_log_file_exist
 
-  external stub_flush : FlushOptions.t -> t -> unit = "caml_rocksdb_Flush"
+  external stub_flush : t -> FlushOptions.t -> unit = "caml_rocksdb_Flush"
   let flush ?flushoptions db =
-    stub_flush (flushoptions ||| FlushOptions.default) db
+    stub_flush db (flushoptions ||| FlushOptions.default)
 
   (* any access to db after [close] will result in SEGV *)
   external close : t -> unit = "caml_rocksdb_close"
@@ -342,6 +342,7 @@ module Transaction = struct
   external put_log_data : t -> string -> unit = "caml_rocksdb_Transaction_PutLogData" [@@noalloc]
   external delete : t -> string -> unit = "caml_rocksdb_Transaction_Delete" [@@noalloc]
   external merge : t -> string -> string -> unit = "caml_rocksdb_Transaction_Merge" [@@noalloc]
+  external destroy : t -> unit = "caml_rocksdb_Transaction_destroy" [@@noalloc]
 end
 
 module TransactionDB = struct

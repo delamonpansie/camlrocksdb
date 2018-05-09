@@ -269,6 +269,7 @@ module Transaction : sig
     = "caml_rocksdb_Transaction_Delete" [@@noalloc]
   external merge : t -> string -> string -> unit
     = "caml_rocksdb_Transaction_Merge" [@@noalloc]
+  external destroy : t -> unit = "caml_rocksdb_Transaction_destroy" [@@noalloc]
 end
 
 module TransactionDB : sig
