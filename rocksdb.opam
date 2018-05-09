@@ -7,9 +7,9 @@ homepage: "https://github.com/delamonpansie/camlrocks"
 bug-reports: "https://github.com/delamonpansie/camlrocks"
 license: "MIT"
 dev-repo: "https://github.com/delamonpansie/camlrocks.git"
-build: [ [ jbuild "build" ] ]
-install: [ jbuild "install" ]
+build: [ [ "jbuilder" "build" ] ]
+install: [ "jbuilder" "install" ]
 remove: [ "ocamlfind" "remove" "rocksdb" ]
 depends: [
-  "ocamlfind" "jbuild" "opam-installer" {build}
+  "ocamlfind" "jbuilder" "opam-installer" {build}
 ]
