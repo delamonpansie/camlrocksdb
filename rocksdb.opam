@@ -11,5 +11,5 @@ build: [ [ "jbuilder" "build" ] ]
 install: [ "jbuilder" "install" ]
 remove: [ "ocamlfind" "remove" "rocksdb" ]
 depends: [
-  "ocamlfind" "jbuilder" "opam-installer" {build}
+  "ocamlfind" "jbuilder" {build}
 ]
