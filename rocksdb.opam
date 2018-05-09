@@ -1,0 +1,15 @@
+opam-version: "2.0"
+name: "camlrocksdb"
+version: "0.1.0"
+maintainer: "Yuriy Vostrikov <delamonpansie@gmail.com>"
+authors: "Yuriy Vostrikov <delamonpansie@gmail.com>"
+homepage: "https://github.com/delamonpansie/camlrocks"
+bug-reports: "https://github.com/delamonpansie/camlrocks"
+license: "MIT"
+dev-repo: "https://github.com/delamonpansie/camlrocks.git"
+build: [ [ jbuild "build" ] ]
+install: [ jbuild "install" ]
+remove: [ "ocamlfind" "remove" "rocksdb" ]
+depends: [
+  "ocamlfind" "jbuild" "opam-installer" {build}
+]

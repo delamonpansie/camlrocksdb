@@ -1,0 +1,10 @@
+(jbuild_version 1)
+(library
+ ((name        "rocksdb")
+  (public_name "rocksdb")
+  (libraries  ())
+  (synopsis "RocksDB bindings")
+  (cxx_names ("rocksdb_stubs"))
+  (cxx_flags ("-std=c++11"))
+  (wrapped false)))
+
