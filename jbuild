@@ -6,5 +6,6 @@
   (synopsis "RocksDB bindings")
   (cxx_names ("rocksdb_stubs"))
   (cxx_flags ("-std=c++11"))
+  (library_flags  (-cclib -lrocksdb -cclib -Wl,-rpath,/usr/local/lib))
   (wrapped false)))
 

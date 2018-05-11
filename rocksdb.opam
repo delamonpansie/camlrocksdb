@@ -1,6 +1,6 @@
 opam-version: "2.0"
 name: "camlrocksdb"
-version: "0.2.0"
+version: "0.2.1"
 maintainer: "Yuriy Vostrikov <delamonpansie@gmail.com>"
 authors: "Yuriy Vostrikov <delamonpansie@gmail.com>"
 homepage: "https://github.com/delamonpansie/camlrocks"
